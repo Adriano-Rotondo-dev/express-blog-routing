@@ -1,11 +1,14 @@
 const express = require("express");
 const router = express.Router();
+const posts = require("../posts")
 
 //TODO: INDEX
 //[GET]/posts(index)
 router.get("/", (req, res) => {
   console.log(req.params);
-  res.send(`you requested the posts list`);
+  // res.send(`you requested the posts list`);
+  //*Bonus 1
+  res.json(posts) 
 });
 
 //TODO: SHOW
