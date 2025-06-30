@@ -1,7 +1,6 @@
 const express = require("express");
 const router = express.Router();
 
-
 //TODO: INDEX
 //[GET]/posts(index)
 router.get("/", (req, res) => {
