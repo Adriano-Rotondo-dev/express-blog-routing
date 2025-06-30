@@ -28,7 +28,7 @@ router.get("/:id", (req, res) => {
 //[POST]/posts(store)
 router.post("/", (req, res) => {
   const id = req.params.id;
-  res.send(`create a new post with id: ${id}`);
+  res.send(`Create a new post`);
 });
 
 //TODO: UPDATE
