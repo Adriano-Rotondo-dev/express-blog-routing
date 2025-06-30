@@ -14,8 +14,14 @@ router.get("/", (req, res) => {
 //TODO: SHOW
 //[GET]/posts/:id(show)
 router.get("/:id", (req, res) => {
-  const id = req.params.id;
-  res.send(`you requested data of the post with slug : ${id}`);
+  // const id = req.params.id;
+  // res.send(`you requested data of the post with slug : ${id}`);
+  //*Bonus 2
+  const id = Number(req.params.id)
+  const postById = posts.find (post => post.id === id)
+  if (postById) {
+      res.json(postById)
+  } 
 });
 
 //TODO: STORE
